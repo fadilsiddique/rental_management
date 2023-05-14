@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RENT-ORD-.#####",
+ "creation": "2023-05-14 13:13:24.079585",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rental_booking_id",
+  "status",
+  "customer_section",
+  "customer",
+  "pickup_and_return_dates_section",
+  "pickup_date",
+  "return_date",
+  "rented_items_section",
+  "rental_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "rental_booking_id",
+   "fieldtype": "Link",
+   "label": "Rental Booking ID",
+   "options": "Rental Booking"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nRented\nReturned\nClosed"
+  },
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "pickup_and_return_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Pickup and Return Dates"
+  },
+  {
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "label": "Pickup Date"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "rented_items_section",
+   "fieldtype": "Section Break",
+   "label": "Rental Items"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "fieldname": "rental_items",
+   "fieldtype": "Table",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Rental Items",
+   "options": "Rental Item",
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-14 14:36:03.700275",
+ "modified_by": "Administrator",
+ "module": "Rental Management",
+ "name": "Rental Order",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Open"
+  },
+  {
+   "color": "Orange",
+   "title": "Rented"
+  },
+  {
+   "color": "Green",
+   "title": "Returned"
+  },
+  {
+   "color": "Gray",
+   "title": "Closed"
+  }
+ ]
+}

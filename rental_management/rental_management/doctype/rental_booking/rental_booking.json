@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "RENT-BOOKING-.#####",
+ "creation": "2023-05-14 12:43:08.728267",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_details_section",
+  "name1",
+  "phone_number",
+  "pickup_and_return_dates_section",
+  "pickup_date",
+  "return_date",
+  "rental_items_section",
+  "rental_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "mandatory_depends_on": "eval: doc.new_customer==1"
+  },
+  {
+   "fieldname": "pickup_and_return_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Pickup and Return Dates"
+  },
+  {
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Pickup Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_items_section",
+   "fieldtype": "Section Break",
+   "label": "Rental Items"
+  },
+  {
+   "fieldname": "rental_items",
+   "fieldtype": "Table",
+   "label": "Rental Items",
+   "options": "Rental Item Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-14 14:49:36.473608",
+ "modified_by": "Administrator",
+ "module": "Rental Management",
+ "name": "Rental Booking",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
