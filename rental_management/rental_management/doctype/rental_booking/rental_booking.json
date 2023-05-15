@@ -30,10 +30,8 @@
   },
   {
    "fieldname": "phone_number",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Phone Number",
-   "mandatory_depends_on": "eval: doc.new_customer==1"
+   "fieldtype": "Data",
+   "label": "Phone Number"
   },
   {
    "fieldname": "pickup_and_return_dates_section",
@@ -67,7 +65,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-14 14:49:36.473608",
+ "modified": "2023-05-15 11:08:14.217285",
  "modified_by": "Administrator",
  "module": "Rental Management",
  "name": "Rental Booking",
