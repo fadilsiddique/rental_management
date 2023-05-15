@@ -48,11 +48,15 @@
    "label": "Pickup and Return Dates"
   },
   {
+   "fetch_from": "rental_booking_id.pickup_date",
+   "fetch_if_empty": 1,
    "fieldname": "pickup_date",
    "fieldtype": "Date",
    "label": "Pickup Date"
   },
   {
+   "fetch_from": "rental_booking_id.return_date",
+   "fetch_if_empty": 1,
    "fieldname": "return_date",
    "fieldtype": "Date",
    "label": "Return Date"
@@ -76,7 +80,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-14 14:36:03.700275",
+ "modified": "2023-05-15 16:26:45.168357",
  "modified_by": "Administrator",
  "module": "Rental Management",
  "name": "Rental Order",
