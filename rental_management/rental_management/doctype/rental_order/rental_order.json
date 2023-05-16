@@ -79,8 +79,14 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-05-15 16:26:45.168357",
+ "links": [
+  {
+   "group": "Sales Invoice",
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "rental_order_id"
+  }
+ ],
+ "modified": "2023-05-16 11:19:11.796916",
  "modified_by": "Administrator",
  "module": "Rental Management",
  "name": "Rental Order",

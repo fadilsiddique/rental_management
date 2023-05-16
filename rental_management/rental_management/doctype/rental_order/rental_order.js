@@ -2,8 +2,29 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Rental Order', {
-    refresh: function(frm) {
+	validate: function(frm) {
+        if (frm.doc.pickup_date < get_today()) {
+            frappe.throw(__("Please select a Pickup Date from the present or future."));
+        }
+    },
+	pickup_date: function(frm) {
+        if (!frm.doc.return_date) {
+            frm.set_value("return_date", frm.doc.pickup_date);
+        }
 
+        frm.fields_dict.return_date.datepicker.update({
+            minDate: frm.doc.pickup_date ? new Date(frm.doc.pickup_date) : null
+        });
+    },
+	return_date: function(frm) {
+        frm.fields_dict.pickup_date.datepicker.update({
+            maxDate: frm.doc.return_date ? new Date(frm.doc.return_date) : null
+        });
+    },
+    refresh: function(frm) {
+		frm.fields_dict.pickup_date.datepicker.update({
+			minDate: new Date(frappe.datetime.get_today()),
+			})
 		let items = []
 
 		frm.doc.rental_items.map((event)=>{
